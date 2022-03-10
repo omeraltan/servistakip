@@ -1,0 +1,64 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182847",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "irtibat_temel",
+  "fields": [
+    {
+      "fieldName": "adi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "soyadi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "telefonu",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "15",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "tcnu",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "eposta",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "unvani",
+      "fieldType": "Unvani",
+      "fieldTypeJavadoc": "Unvanların Tanımlandığı Tablodur.\\n@author Ömer ALTAN",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "DEVLET_MEMURU,SOZLESMELI_BILISIM_PERSONELI,KOORDINATOR,JANDARMA_UZMAN,JANDARMA_ASTSUBAY,JANDARMA_SUBAY"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Alınan Servislerin, Personel İrtibat Bilgilerinin Tanımlanacağı Ana Tablodur.\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "IrtibatTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "kurumTemel",
+      "otherEntityRelationshipName": "irtibatTemel",
+      "relationshipName": "kurum",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

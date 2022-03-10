@@ -1,0 +1,28 @@
+{
+  "servisTakipApp": {
+    "klasorTemel": {
+      "home": {
+        "title": "Klasor Temels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Klasor Temel",
+        "createOrEditLabel": "Create or edit a Klasor Temel",
+        "notFound": "No Klasor Temels found"
+      },
+      "created": "A new Klasor Temel is created with identifier {{ param }}",
+      "updated": "A Klasor Temel is updated with identifier {{ param }}",
+      "deleted": "A Klasor Temel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Klasor Temel {{ id }}?"
+      },
+      "detail": {
+        "title": "Klasor Temel"
+      },
+      "id": "ID",
+      "odasi": "Odasi",
+      "dolabi": "Dolabi",
+      "klasoru": "Klasoru",
+      "fihristSirasi": "Fihrist Sirasi",
+      "servis": "Servis"
+    }
+  }
+}

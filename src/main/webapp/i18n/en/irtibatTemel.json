@@ -1,0 +1,30 @@
+{
+  "servisTakipApp": {
+    "irtibatTemel": {
+      "home": {
+        "title": "Irtibat Temels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Irtibat Temel",
+        "createOrEditLabel": "Create or edit a Irtibat Temel",
+        "notFound": "No Irtibat Temels found"
+      },
+      "created": "A new Irtibat Temel is created with identifier {{ param }}",
+      "updated": "A Irtibat Temel is updated with identifier {{ param }}",
+      "deleted": "A Irtibat Temel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Irtibat Temel {{ id }}?"
+      },
+      "detail": {
+        "title": "Irtibat Temel"
+      },
+      "id": "ID",
+      "adi": "Adi",
+      "soyadi": "Soyadi",
+      "telefonu": "Telefonu",
+      "tcnu": "Tcnu",
+      "eposta": "Eposta",
+      "unvani": "Unvani",
+      "kurum": "Kurum"
+    }
+  }
+}

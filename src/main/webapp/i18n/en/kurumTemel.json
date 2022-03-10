@@ -1,0 +1,25 @@
+{
+  "servisTakipApp": {
+    "kurumTemel": {
+      "home": {
+        "title": "Kurum Temels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Kurum Temel",
+        "createOrEditLabel": "Create or edit a Kurum Temel",
+        "notFound": "No Kurum Temels found"
+      },
+      "created": "A new Kurum Temel is created with identifier {{ param }}",
+      "updated": "A Kurum Temel is updated with identifier {{ param }}",
+      "deleted": "A Kurum Temel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Kurum Temel {{ id }}?"
+      },
+      "detail": {
+        "title": "Kurum Temel"
+      },
+      "id": "ID",
+      "bakanlikAdi": "Bakanlik Adi",
+      "birimAdi": "Birim Adi"
+    }
+  }
+}

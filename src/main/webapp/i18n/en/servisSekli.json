@@ -1,0 +1,10 @@
+{
+  "servisTakipApp": {
+    "ServisSekli": {
+      "null": "",
+      "KURUMDAN_ALINAN": "KURUMDAN_ALINAN",
+      "KURUMA_VERILEN": "KURUMA_VERILEN",
+      "KURUM_ICI_VERILEN": "KURUM_ICI_VERILEN"
+    }
+  }
+}

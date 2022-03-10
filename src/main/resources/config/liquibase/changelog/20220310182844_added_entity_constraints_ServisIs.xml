@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity ServisIs.
+    -->
+    <changeSet id="20220310182844-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="sorumlu_id"
+                                 baseTableName="servis_is"
+                                 constraintName="fk_servis_is__sorumlu_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="personel"/>
+
+        <addForeignKeyConstraint baseColumnNames="yapan_id"
+                                 baseTableName="servis_is"
+                                 constraintName="fk_servis_is__yapan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="personel"/>
+
+        <addForeignKeyConstraint baseColumnNames="servis_id"
+                                 baseTableName="servis_is"
+                                 constraintName="fk_servis_is__servis_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="servis_temel"/>
+    </changeSet>
+</databaseChangeLog>

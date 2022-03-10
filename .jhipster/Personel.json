@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182851",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "personel",
+  "fields": [
+    {
+      "fieldName": "adi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "soyadi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "telefonu",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "15",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "eposta",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "unvani",
+      "fieldType": "Unvani",
+      "fieldTypeJavadoc": "Unvanların Tanımlandığı Tablodur.\\n@author Ömer ALTAN",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "DEVLET_MEMURU,SOZLESMELI_BILISIM_PERSONELI,KOORDINATOR,JANDARMA_UZMAN,JANDARMA_ASTSUBAY,JANDARMA_SUBAY"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Servislerin Sorumlu Personeli ve Sorun Çözen Personelinin Tanımlanacağı Tablodur.\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "Personel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

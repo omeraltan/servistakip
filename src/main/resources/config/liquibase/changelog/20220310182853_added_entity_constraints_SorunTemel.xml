@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity SorunTemel.
+    -->
+    <changeSet id="20220310182853-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="servis_id"
+                                 baseTableName="sorun_temel"
+                                 constraintName="fk_sorun_temel__servis_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="servis_temel"/>
+
+        <addForeignKeyConstraint baseColumnNames="bulan_id"
+                                 baseTableName="sorun_temel"
+                                 constraintName="fk_sorun_temel__bulan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="personel"/>
+
+        <addForeignKeyConstraint baseColumnNames="cozen_id"
+                                 baseTableName="sorun_temel"
+                                 constraintName="fk_sorun_temel__cozen_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="personel"/>
+    </changeSet>
+</databaseChangeLog>

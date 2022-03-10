@@ -15,7 +15,27 @@
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182844_added_entity_ServisIs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182845_added_entity_ServisTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182846_added_entity_ProtokolTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182847_added_entity_IrtibatTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182848_added_entity_MetodTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182849_added_entity_ProjeTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182850_added_entity_ServisProjeTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182851_added_entity_Personel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182852_added_entity_KurumTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182853_added_entity_SorunTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182854_added_entity_TabloTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182855_added_entity_KlasorTemel.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20220310182844_added_entity_constraints_ServisIs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182845_added_entity_constraints_ServisTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182847_added_entity_constraints_IrtibatTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182848_added_entity_constraints_MetodTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182850_added_entity_constraints_ServisProjeTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182853_added_entity_constraints_SorunTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182854_added_entity_constraints_TabloTemel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220310182855_added_entity_constraints_KlasorTemel.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

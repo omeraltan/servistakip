@@ -1,0 +1,28 @@
+{
+  "servisTakipApp": {
+    "servisIs": {
+      "home": {
+        "title": "Servises",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Servis Is",
+        "createOrEditLabel": "Create or edit a Servis Is",
+        "notFound": "No Servises found"
+      },
+      "created": "A new Servis Is is created with identifier {{ param }}",
+      "updated": "A Servis Is is updated with identifier {{ param }}",
+      "deleted": "A Servis Is is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Servis Is {{ id }}?"
+      },
+      "detail": {
+        "title": "Servis Is"
+      },
+      "id": "ID",
+      "baslamaTarihi": "Baslama Tarihi",
+      "tamamlamaTarihi": "Tamamlama Tarihi",
+      "sorumlu": "Sorumlu",
+      "yapan": "Yapan",
+      "servis": "Servis"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182854",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tablo_temel",
+  "fields": [
+    {
+      "fieldName": "gercekVeritabani",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "gercekLogTablo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "gercekaciklamasi",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "500",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "testVeritabani",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "testLogTablo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "testaciklamasi",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "500",
+      "fieldValidateRulesMinlength": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Log Tablolarının Tanımlanacağı Tablodur.\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "TabloTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "servisTemel",
+      "otherEntityRelationshipName": "tabloTemel",
+      "ownerSide": true,
+      "relationshipName": "servis",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

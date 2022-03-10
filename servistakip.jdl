@@ -1,0 +1,241 @@
+/**
+*Servisi Hazırlayan ve Sorumlusu Bilgileri Tablosu
+*@author Ömer ALTAN
+*/
+entity ServisIs {
+	baslamaTarihi LocalDate required 
+    tamamlamaTarihi LocalDate required
+}
+/**
+*Servislerin Tanımlanacağı Ana Tablodur.
+*@author Ömer ALTAN
+*/
+entity ServisTemel {
+    servisAdi String required minlength(0) maxlength(250)
+    servisUrl String required minlength(0) maxlength(150)
+    servisVeriTip String required minlength(0) maxlength(100)
+    aciklamasi String required minlength(0) maxlength(500)
+    dosyasi Blob
+    resmi ImageBlob
+    servisSekli ServisSekli required 
+    servisTipi ServisTipi required
+    baglantiSekli BaglantiSekli required
+    servisDurum ServisDurum
+    anlikSorgu String 
+    yiginVeri String
+    gds String
+    
+}
+/**
+*Servislerin Protokollerinin Tanımlanacağı Ana Tablodur.
+*@author Ömer ALTAN
+*/
+entity ProtokolTemel {
+    sureDurum SureDurum required
+    sureBitisTarihi LocalDate
+    protokolNu String required minlength(0) maxlength(250)
+    olurYaziNu String required minlength(0) maxlength(250)
+    protokolImzaTarihi LocalDate required
+    protokolAciklamasi String minlength(0) maxlength(500)
+}
+/**
+*Alınan Servislerin, Personel İrtibat Bilgilerinin Tanımlanacağı Ana Tablodur.
+*@author Ömer ALTAN
+*/
+entity IrtibatTemel {
+	adi String required minlength(0) maxlength(50)
+    soyadi String required minlength(0) maxlength(50)
+    telefonu String required minlength(0) maxlength(15)
+    tcnu Integer required
+    eposta String required minlength(0) maxlength(50)
+    unvani Unvani required
+}
+/**
+*Sevislerin Metodları burada tanımlanmaktadır.
+*@author Ömer ALTAN 
+*/
+entity MetodTemel {
+	metodAdi String required minlength(0) maxlength(50)
+    metodNu Integer required
+    metodAciklamasi String required minlength(0) maxlength(250)
+}
+/**
+*Servisleri Kullanan Projelerin Tanımlandığı Yer
+*@author Ömer ALTAN
+*/
+entity ProjeTemel {
+	projedi String required minlength(0) maxlength(100)
+    projeKodu String minlength(0) maxlength(50)
+    aciklama String required minlength(0) maxlength(150)
+}
+entity ServisProjeTemel {
+	kullanildigiYer String required minlength(0) maxlength(150)
+}
+/**
+*Servislerin Sorumlu Personeli ve Sorun Çözen Personelinin Tanımlanacağı Tablodur.
+*@author Ömer ALTAN
+*/
+entity Personel {
+	adi String required minlength(0) maxlength(50)
+    soyadi String required minlength(0) maxlength(50)
+    telefonu String required minlength(0) maxlength(15)
+    eposta String minlength(0) maxlength(50)
+    unvani Unvani required
+}
+/**
+*Kurumların Tanımlanacağı Tablodur.
+*@author Ömer ALTAN
+*/
+entity KurumTemel {
+	bakanlikAdi String required minlength(0) maxlength(100)
+	birimAdi String required minlength(0) maxlength(100)
+}
+/**Sorunların ve Çözümlerinin Tanımlanacağı Tablodur.
+*@author Ömer ALTAN
+*/
+entity SorunTemel {
+	sorunAciklamasi String required minlength(0) maxlength(500)
+    sorunTarihi LocalDate required
+    cozumAciklamasi String minlength(0) maxlength(500)
+    cozumTarihi LocalDate
+}
+/**
+*Log Tablolarının Tanımlanacağı Tablodur.
+*@author Ömer ALTAN
+*/
+entity TabloTemel {
+	gercekVeritabani String required minlength(0) maxlength(100)
+    gercekLogTablo String required minlength(0) maxlength(100)
+    gercekaciklamasi String minlength(0) maxlength(500)
+    testVeritabani String required minlength(0) maxlength(100)
+    testLogTablo String required minlength(0) maxlength(100)
+    testaciklamasi String minlength(0) maxlength(500)
+}
+/**
+*Belgelerin Yerinin Tanımlanacağı Tablodur.
+*@author Ömer ALTAN
+*/
+entity KlasorTemel {
+	odasi String required minlength(0) maxlength(50)
+	dolabi String required minlength(0) maxlength(50)
+	klasoru String required minlength(0) maxlength(50)
+    fihristSirasi String required minlength(0) maxlength(50)
+}
+/**
+*Servis Şekillerinin Tanımlandığı Tablodur.
+*@author Ömer ALTAN
+*/
+enum ServisSekli {
+    KURUMDAN_ALINAN, KURUMA_VERILEN, KURUM_ICI_VERILEN
+}
+/**
+*Servis Süre Durumlarının Tanımlandığı Tablodur.
+*@author Ömer ALTAN
+*/
+enum SureDurum {
+	SURELI, SURESIZ
+}
+/**
+*Servis Tiplerinin Tanımlandığı Tablodur.
+*@author Ömer ALTAN
+*/
+enum ServisTipi {
+	WEB, WMS, WFS
+}
+/**
+*Unvanların Tanımlandığı Tablodur.
+*@author Ömer ALTAN
+*/
+enum Unvani {
+	DEVLET_MEMURU, SOZLESMELI_BILISIM_PERSONELI, KOORDINATOR, JANDARMA_UZMAN, JANDARMA_ASTSUBAY, JANDARMA_SUBAY
+}
+/**
+*Servislerin Bağlantı Şeklinin Tanımlandığı Tablo
+*@author Ömer ALTAN
+*/
+enum BaglantiSekli {
+	ACIK_INTERNET, KAMUNET, KIRALIK
+}
+/**
+*Servisin Durumu Bilgileri
+*@author Ömer ALTAN
+*/
+enum ServisDurum {
+	PLANLANAN, DEVAM_EDEN, TAMAMLANAN
+}
+/**
+*ServisIs'de Kullanılacak Personellerin ve Servis'in İlişkisi
+*@author Ömer ALTAN
+*/
+relationship OneToOne {
+	ServisIs{sorumlu} to Personel
+    ServisIs{yapan} to Personel
+    ServisIs{servis} to ServisTemel
+}
+/**
+*Servisler İle İlgili İrtibat Sağlanacak Personellerin Kurum Bilgileri İle İlişkisi
+*@author Ömer ALTAN
+*/
+relationship ManyToOne {
+	IrtibatTemel{kurum} to KurumTemel
+}
+/**
+*Servis İle Protokol'un İlişkisi
+*@author Ömer ALTAN
+*/
+relationship OneToOne {
+	ServisTemel{protokol} to ProtokolTemel
+}
+/**
+*Servis ile Kurumların İlişkisi
+*@author Ömer ALTAN
+*/
+relationship ManyToOne {
+	ServisTemel{bakanlik} to KurumTemel
+}
+/**
+*Servisler İle Bunların Sorunlarının İlişkisi
+*@author Ömer ALTAN
+*/
+relationship ManyToOne {
+	SorunTemel{servis} to ServisTemel
+    SorunTemel{bulan} to Personel
+    SorunTemel{cozen} to Personel
+}
+/**
+*Vertabanı İle Servis'in İlişkisi
+*@author Ömer ALTAN
+*/
+relationship OneToOne {
+	TabloTemel{servis} to ServisTemel
+}
+/**
+*Servis İle Klasörlerinin İlişkisi
+*@author Ömer ALTAN
+*/
+relationship OneToOne {
+	KlasorTemel{servis} to ServisTemel
+}
+/**
+*Servislerin Metodları ile İlişkisi
+*@author Ömer ALTAN
+*/
+relationship ManyToOne {
+	MetodTemel {servis} to ServisTemel
+}
+/**
+*Servislerin Projeler ile İlişkisi
+*@author Ömer ALTAN
+*/
+relationship ManyToOne {
+	ServisProjeTemel{servis} to ServisTemel
+    ServisProjeTemel{proje} to ProjeTemel
+}
+//Sayfalama Özelliklerini Bütün Sayfalar için Yap.
+paginate all with pagination
+//Data Transfer Objects (DTO) Kullan.
+dto all with mapstruct
+//Servis Özelliklerini Hepsi İçin Yap.
+service all with serviceImpl except ServisTemel, ProtokolTemel, IrtibatTemel, Personel, KurumTemel
+//SeriIs Entity'sinde elasticsearch Kullan.
+search ServisIs with elasticsearch

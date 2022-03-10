@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182848",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "metod_temel",
+  "fields": [
+    {
+      "fieldName": "metodAdi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "metodNu",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "metodAciklamasi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "250",
+      "fieldValidateRulesMinlength": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Sevislerin Metodları burada tanımlanmaktadır.\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "MetodTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "servisTemel",
+      "otherEntityRelationshipName": "metodTemel",
+      "relationshipName": "servis",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

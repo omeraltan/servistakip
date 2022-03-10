@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182849",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "proje_temel",
+  "fields": [
+    {
+      "fieldName": "projedi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "projeKodu",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "aciklama",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "150",
+      "fieldValidateRulesMinlength": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Servisleri Kullanan Projelerin Tanımlandığı Yer\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "ProjeTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

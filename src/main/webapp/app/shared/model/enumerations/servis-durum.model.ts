@@ -1,0 +1,7 @@
+export enum ServisDurum {
+  PLANLANAN = 'PLANLANAN',
+
+  DEVAM_EDEN = 'DEVAM_EDEN',
+
+  TAMAMLANAN = 'TAMAMLANAN',
+}

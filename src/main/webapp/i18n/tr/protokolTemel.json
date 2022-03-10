@@ -1,0 +1,29 @@
+{
+  "servisTakipApp": {
+    "protokolTemel": {
+      "home": {
+        "title": "Protokol Temels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Protokol Temel",
+        "createOrEditLabel": "Create or edit a Protokol Temel",
+        "notFound": "No Protokol Temels found"
+      },
+      "created": "A new Protokol Temel is created with identifier {{ param }}",
+      "updated": "A Protokol Temel is updated with identifier {{ param }}",
+      "deleted": "A Protokol Temel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Protokol Temel {{ id }}?"
+      },
+      "detail": {
+        "title": "Protokol Temel"
+      },
+      "id": "ID",
+      "sureDurum": "Sure Durum",
+      "sureBitisTarihi": "Sure Bitis Tarihi",
+      "protokolNu": "Protokol Nu",
+      "olurYaziNu": "Olur Yazi Nu",
+      "protokolImzaTarihi": "Protokol Imza Tarihi",
+      "protokolAciklamasi": "Protokol Aciklamasi"
+    }
+  }
+}

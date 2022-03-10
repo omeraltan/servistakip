@@ -1,0 +1,53 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182855",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "klasor_temel",
+  "fields": [
+    {
+      "fieldName": "odasi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "dolabi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "klasoru",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "fihristSirasi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Belgelerin Yerinin Tanımlanacağı Tablodur.\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "KlasorTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "servisTemel",
+      "otherEntityRelationshipName": "klasorTemel",
+      "ownerSide": true,
+      "relationshipName": "servis",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

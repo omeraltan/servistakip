@@ -1,0 +1,54 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182846",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "protokol_temel",
+  "fields": [
+    {
+      "fieldName": "sureDurum",
+      "fieldType": "SureDurum",
+      "fieldTypeJavadoc": "Servis Süre Durumlarının Tanımlandığı Tablodur.\\n@author Ömer ALTAN",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "SURELI,SURESIZ"
+    },
+    {
+      "fieldName": "sureBitisTarihi",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "protokolNu",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "250",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "olurYaziNu",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "250",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "protokolImzaTarihi",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "protokolAciklamasi",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "500",
+      "fieldValidateRulesMinlength": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Servislerin Protokollerinin Tanımlanacağı Ana Tablodur.\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "ProtokolTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

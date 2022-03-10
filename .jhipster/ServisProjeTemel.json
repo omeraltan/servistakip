@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182850",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "servis_proje_temel",
+  "fields": [
+    {
+      "fieldName": "kullanildigiYer",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "150",
+      "fieldValidateRulesMinlength": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ServisProjeTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "servisTemel",
+      "otherEntityRelationshipName": "servisProjeTemel",
+      "relationshipName": "servis",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "projeTemel",
+      "otherEntityRelationshipName": "servisProjeTemel",
+      "relationshipName": "proje",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

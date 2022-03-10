@@ -1,0 +1,30 @@
+{
+  "servisTakipApp": {
+    "tabloTemel": {
+      "home": {
+        "title": "Tablo Temels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tablo Temel",
+        "createOrEditLabel": "Create or edit a Tablo Temel",
+        "notFound": "No Tablo Temels found"
+      },
+      "created": "A new Tablo Temel is created with identifier {{ param }}",
+      "updated": "A Tablo Temel is updated with identifier {{ param }}",
+      "deleted": "A Tablo Temel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tablo Temel {{ id }}?"
+      },
+      "detail": {
+        "title": "Tablo Temel"
+      },
+      "id": "ID",
+      "gercekVeritabani": "Gercek Veritabani",
+      "gercekLogTablo": "Gercek Log Tablo",
+      "gercekaciklamasi": "Gercekaciklamasi",
+      "testVeritabani": "Test Veritabani",
+      "testLogTablo": "Test Log Tablo",
+      "testaciklamasi": "Testaciklamasi",
+      "servis": "Servis"
+    }
+  }
+}

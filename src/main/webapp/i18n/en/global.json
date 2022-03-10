@@ -7,6 +7,18 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "servisIs": "Servis Is",
+        "servisTemel": "Servis Temel",
+        "protokolTemel": "Protokol Temel",
+        "irtibatTemel": "Irtibat Temel",
+        "metodTemel": "Metod Temel",
+        "projeTemel": "Proje Temel",
+        "servisProjeTemel": "Servis Proje Temel",
+        "personel": "Personel",
+        "kurumTemel": "Kurum Temel",
+        "sorunTemel": "Sorun Temel",
+        "tabloTemel": "Tablo Temel",
+        "klasorTemel": "Klasor Temel",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

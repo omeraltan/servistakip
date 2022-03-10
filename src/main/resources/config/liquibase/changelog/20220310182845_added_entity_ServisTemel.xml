@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity ServisTemel.
+    -->
+    <changeSet id="20220310182845-1" author="jhipster">
+        <createTable tableName="servis_temel" remarks="Servislerin Tanımlanacağı Ana Tablodur.\n@author Ömer ALTAN">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="servis_adi" type="varchar(250)">
+                <constraints nullable="false" />
+            </column>
+            <column name="servis_url" type="varchar(150)">
+                <constraints nullable="false" />
+            </column>
+            <column name="servis_veri_tip" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="aciklamasi" type="varchar(500)">
+                <constraints nullable="false" />
+            </column>
+            <column name="dosyasi" type="blob">
+                <constraints nullable="true" />
+            </column>
+            <column name="dosyasi_content_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="resmi" type="blob">
+                <constraints nullable="true" />
+            </column>
+            <column name="resmi_content_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="servis_sekli" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="servis_tipi" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="baglanti_sekli" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="servis_durum" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="anlik_sorgu" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="yigin_veri" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="gds" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="protokol_id" type="bigint">
+                <constraints nullable="true" unique="true" uniqueConstraintName="ux_servis_temel__protokol_id" />
+            </column>
+            <column name="bakanlik_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220310182845-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/servis_temel.csv"
+                  separator=";"
+                  tableName="servis_temel"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="servis_adi" type="string"/>
+            <column name="servis_url" type="string"/>
+            <column name="servis_veri_tip" type="string"/>
+            <column name="aciklamasi" type="string"/>
+            <column name="dosyasi" type="blob"/>
+            <column name="dosyasi_content_type" type="string"/>
+            <column name="resmi" type="blob"/>
+            <column name="resmi_content_type" type="string"/>
+            <column name="servis_sekli" type="string"/>
+            <column name="servis_tipi" type="string"/>
+            <column name="baglanti_sekli" type="string"/>
+            <column name="servis_durum" type="string"/>
+            <column name="anlik_sorgu" type="string"/>
+            <column name="yigin_veri" type="string"/>
+            <column name="gds" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,30 @@
+{
+  "servisTakipApp": {
+    "sorunTemel": {
+      "home": {
+        "title": "Sorun Temels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sorun Temel",
+        "createOrEditLabel": "Create or edit a Sorun Temel",
+        "notFound": "No Sorun Temels found"
+      },
+      "created": "A new Sorun Temel is created with identifier {{ param }}",
+      "updated": "A Sorun Temel is updated with identifier {{ param }}",
+      "deleted": "A Sorun Temel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sorun Temel {{ id }}?"
+      },
+      "detail": {
+        "title": "Sorun Temel"
+      },
+      "id": "ID",
+      "sorunAciklamasi": "Sorun Aciklamasi",
+      "sorunTarihi": "Sorun Tarihi",
+      "cozumAciklamasi": "Cozum Aciklamasi",
+      "cozumTarihi": "Cozum Tarihi",
+      "servis": "Servis",
+      "bulan": "Bulan",
+      "cozen": "Cozen"
+    }
+  }
+}

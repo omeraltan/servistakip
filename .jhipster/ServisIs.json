@@ -1,0 +1,50 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182844",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "servis_is",
+  "fields": [
+    {
+      "fieldName": "baslamaTarihi",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tamamlamaTarihi",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Servisi Hazırlayan ve Sorumlusu Bilgileri Tablosu\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "ServisIs",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "personel",
+      "otherEntityRelationshipName": "servisIs",
+      "ownerSide": true,
+      "relationshipName": "sorumlu",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "personel",
+      "otherEntityRelationshipName": "servisIs",
+      "ownerSide": true,
+      "relationshipName": "yapan",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "servisTemel",
+      "otherEntityRelationshipName": "servisIs",
+      "ownerSide": true,
+      "relationshipName": "servis",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": false,
+  "service": "serviceImpl"
+}

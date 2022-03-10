@@ -51,6 +51,18 @@ public class CacheConfiguration {
             createCache(cm, com.servistakip.app.domain.User.class.getName());
             createCache(cm, com.servistakip.app.domain.Authority.class.getName());
             createCache(cm, com.servistakip.app.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.servistakip.app.domain.ServisIs.class.getName());
+            createCache(cm, com.servistakip.app.domain.ServisTemel.class.getName());
+            createCache(cm, com.servistakip.app.domain.ProtokolTemel.class.getName());
+            createCache(cm, com.servistakip.app.domain.IrtibatTemel.class.getName());
+            createCache(cm, com.servistakip.app.domain.MetodTemel.class.getName());
+            createCache(cm, com.servistakip.app.domain.ProjeTemel.class.getName());
+            createCache(cm, com.servistakip.app.domain.ServisProjeTemel.class.getName());
+            createCache(cm, com.servistakip.app.domain.Personel.class.getName());
+            createCache(cm, com.servistakip.app.domain.KurumTemel.class.getName());
+            createCache(cm, com.servistakip.app.domain.SorunTemel.class.getName());
+            createCache(cm, com.servistakip.app.domain.TabloTemel.class.getName());
+            createCache(cm, com.servistakip.app.domain.KlasorTemel.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

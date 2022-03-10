@@ -1,0 +1,38 @@
+{
+  "servisTakipApp": {
+    "servisTemel": {
+      "home": {
+        "title": "Servis Temels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Servis Temel",
+        "createOrEditLabel": "Create or edit a Servis Temel",
+        "notFound": "No Servis Temels found"
+      },
+      "created": "A new Servis Temel is created with identifier {{ param }}",
+      "updated": "A Servis Temel is updated with identifier {{ param }}",
+      "deleted": "A Servis Temel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Servis Temel {{ id }}?"
+      },
+      "detail": {
+        "title": "Servis Temel"
+      },
+      "id": "ID",
+      "servisAdi": "Servis Adi",
+      "servisUrl": "Servis Url",
+      "servisVeriTip": "Servis Veri Tip",
+      "aciklamasi": "Aciklamasi",
+      "dosyasi": "Dosyasi",
+      "resmi": "Resmi",
+      "servisSekli": "Servis Sekli",
+      "servisTipi": "Servis Tipi",
+      "baglantiSekli": "Baglanti Sekli",
+      "servisDurum": "Servis Durum",
+      "anlikSorgu": "Anlik Sorgu",
+      "yiginVeri": "Yigin Veri",
+      "gds": "Gds",
+      "protokol": "Protokol",
+      "bakanlik": "Bakanlik"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182845",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "servis_temel",
+  "fields": [
+    {
+      "fieldName": "servisAdi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "250",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "servisUrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "150",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "servisVeriTip",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "aciklamasi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "500",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "dosyasi",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "resmi",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "servisSekli",
+      "fieldType": "ServisSekli",
+      "fieldTypeJavadoc": "Servis Şekillerinin Tanımlandığı Tablodur.\\n@author Ömer ALTAN",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "KURUMDAN_ALINAN,KURUMA_VERILEN,KURUM_ICI_VERILEN"
+    },
+    {
+      "fieldName": "servisTipi",
+      "fieldType": "ServisTipi",
+      "fieldTypeJavadoc": "Servis Tiplerinin Tanımlandığı Tablodur.\\n@author Ömer ALTAN",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "WEB,WMS,WFS"
+    },
+    {
+      "fieldName": "baglantiSekli",
+      "fieldType": "BaglantiSekli",
+      "fieldTypeJavadoc": "Servislerin Bağlantı Şeklinin Tanımlandığı Tablo\\n@author Ömer ALTAN",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ACIK_INTERNET,KAMUNET,KIRALIK"
+    },
+    {
+      "fieldName": "servisDurum",
+      "fieldType": "ServisDurum",
+      "fieldTypeJavadoc": "Servisin Durumu Bilgileri\\n@author Ömer ALTAN",
+      "fieldValues": "PLANLANAN,DEVAM_EDEN,TAMAMLANAN"
+    },
+    {
+      "fieldName": "anlikSorgu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "yiginVeri",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gds",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Servislerin Tanımlanacağı Ana Tablodur.\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "ServisTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "protokolTemel",
+      "otherEntityRelationshipName": "servisTemel",
+      "ownerSide": true,
+      "relationshipName": "protokol",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "kurumTemel",
+      "otherEntityRelationshipName": "servisTemel",
+      "relationshipName": "bakanlik",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

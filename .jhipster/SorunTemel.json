@@ -1,0 +1,59 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182853",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "sorun_temel",
+  "fields": [
+    {
+      "fieldName": "sorunAciklamasi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "500",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "sorunTarihi",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "cozumAciklamasi",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "500",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "cozumTarihi",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Sorunların ve Çözümlerinin Tanımlanacağı Tablodur.\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "SorunTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "servisTemel",
+      "otherEntityRelationshipName": "sorunTemel",
+      "relationshipName": "servis",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "personel",
+      "otherEntityRelationshipName": "sorunTemel",
+      "relationshipName": "bulan",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "personel",
+      "otherEntityRelationshipName": "sorunTemel",
+      "relationshipName": "cozen",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

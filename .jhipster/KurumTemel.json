@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220310182852",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "kurum_temel",
+  "fields": [
+    {
+      "fieldName": "bakanlikAdi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "0"
+    },
+    {
+      "fieldName": "birimAdi",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Kurumların Tanımlanacağı Tablodur.\\n@author Ömer ALTAN",
+  "jpaMetamodelFiltering": false,
+  "name": "KurumTemel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

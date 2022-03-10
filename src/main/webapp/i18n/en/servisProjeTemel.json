@@ -1,0 +1,26 @@
+{
+  "servisTakipApp": {
+    "servisProjeTemel": {
+      "home": {
+        "title": "Servis Proje Temels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Servis Proje Temel",
+        "createOrEditLabel": "Create or edit a Servis Proje Temel",
+        "notFound": "No Servis Proje Temels found"
+      },
+      "created": "A new Servis Proje Temel is created with identifier {{ param }}",
+      "updated": "A Servis Proje Temel is updated with identifier {{ param }}",
+      "deleted": "A Servis Proje Temel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Servis Proje Temel {{ id }}?"
+      },
+      "detail": {
+        "title": "Servis Proje Temel"
+      },
+      "id": "ID",
+      "kullanildigiYer": "Kullanildigi Yer",
+      "servis": "Servis",
+      "proje": "Proje"
+    }
+  }
+}

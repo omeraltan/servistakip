@@ -1,0 +1,27 @@
+{
+  "servisTakipApp": {
+    "metodTemel": {
+      "home": {
+        "title": "Metod Temels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Metod Temel",
+        "createOrEditLabel": "Create or edit a Metod Temel",
+        "notFound": "No Metod Temels found"
+      },
+      "created": "A new Metod Temel is created with identifier {{ param }}",
+      "updated": "A Metod Temel is updated with identifier {{ param }}",
+      "deleted": "A Metod Temel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Metod Temel {{ id }}?"
+      },
+      "detail": {
+        "title": "Metod Temel"
+      },
+      "id": "ID",
+      "metodAdi": "Metod Adi",
+      "metodNu": "Metod Nu",
+      "metodAciklamasi": "Metod Aciklamasi",
+      "servis": "Servis"
+    }
+  }
+}
